@@ -22,7 +22,7 @@ Projeto: id, título, categoria, descrição, equipe(s), pessoas[], publicaçõe
 Publicação: id, título, tipo, URL oficial, videoId opcional, projetoId. Reutilizar o registro no projeto e na comunicação.
 
 ## Direção visual — correções incorporadas durante a execução
-Referências de álbum: linguagem industrial material aplicada à interface inteira, sem reproduzir rostos, imagens ou caveiras. Preto vinho, verde oliva oxidado, cobre e marfim; ruído discreto, fios abstratos e recortes de superfície feitos por CSS. Nenhuma imagem gerada no banner. Tipografia expressiva apenas no título Kronos; demais títulos, menus e textos priorizam leitura limpa. Faixas horizontais com controles e alternativa em grade no catálogo. Atena compartilha a base visual sem estereótipo feminino. Marca tipográfica provisória até receber a logo oficial.
+Referências de álbum: composição industrial e mecânica, sem reproduzir rostos, imagens ou caveiras. Base preta e dourada; verde apenas em detalhes da composição mecânica. Removidos o ruído global, o fundo oliva e a decoração orbital. Chapas, eixos e cabos sobrepostos em composição vetorial própria; recortes localizados em peças e seções. Nenhuma imagem gerada no banner. Tipografia expressiva apenas no título Kronos; demais títulos, menus e textos priorizam leitura limpa. Central com títulos diretos e sem numeração ou subtítulos decorativos. Navegação renderizada no mesmo clique com retorno instantâneo ao topo. Marca tipográfica provisória até receber a logo oficial.
 
 ## Execução e critérios de aceite
 1. Criar repositório separado e esqueleto estático, sem dependências de framework.

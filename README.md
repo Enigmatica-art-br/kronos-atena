@@ -8,7 +8,7 @@ Sirva esta pasta com qualquer servidor HTTP estático, por exemplo `python -m ht
 ## Organização
 - `index.html`: estrutura, navegação e rodapé.
 - `styles.css`: estrutura e adaptações móveis.
-- `theme.css`: linguagem industrial aplicada à interface; tipografia de leitura limpa, superfícies oliva oxidadas, cobre, preto vinho e recortes discretos.
+- `theme.css`: composição mecânica em preto e dourado; leitura limpa, recortes localizados e acentos de latão. Sem filtro sobre a página.
 - `data.js`: pessoas, robôs, projetos e publicações. IDs ligam os registros.
 - `app.js`: rotas por hash, páginas, filtros, busca e navegação.
 - `assets/`: banner e retratos de demonstração.
@@ -20,7 +20,10 @@ Pessoas e robôs estão claramente identificados como fictícios. Os retratos s�
 O Talos IA e seu vínculo ao Desafio Liga Jovem foram informados pelo responsável. O pitch oficial foi localizado no canal `@EquipeKronos`: https://www.youtube.com/watch?v=0SkIhD2li0U. Não foram inventadas capacidades técnicas ou resultados. O perfil oficial de Instagram é https://www.instagram.com/equipe.kronos/; permalinks dos posts ainda aguardam curadoria.
 
 ## Imagens originais
-Somente os retratos de demonstração são usados: `assets/pessoas-demo.webp`, gerados com a ferramenta integrada de imagens. Brief: dez estudantes adultos fictícios em estúdio, dispostos em cinco colunas e duas linhas. A referência de álbum orienta a interface por CSS; a abertura não utiliza imagens geradas. A fonte expressiva fica restrita à marca Kronos; textos, menus e fichas usam DM Sans local, com licença incluída.
+Somente os retratos de demonstração são usados como imagens geradas: `assets/pessoas-demo.webp`. Brief: dez estudantes adultos fictícios em estúdio, dispostos em cinco colunas e duas linhas. `assets/mechanism.svg` é uma composição vetorial própria de chapas, eixos e cabos; não reproduz a capa de álbum. A fonte expressiva fica restrita à marca Kronos; textos, menus e fichas usam DM Sans local, com licença incluída.
+
+## Revisão de composição e navegação
+A central usa títulos diretos (Robôs, Talos IA, Pessoas e Comunicação), sem numeração ou cabeçalhos auxiliares. A navegação interna renderiza no clique, preserva voltar/avançar e move o foco para o conteúdo. O retorno ao topo usa comportamento instantâneo para evitar a demora causada por rolagem suave global. Carrosséis mantêm deslocamento suave apenas dentro da fileira.
 
 ## Publicação
 GitHub Pages a partir da raiz da branch `main`. Não adicionar CNAME até autorização do responsável. O carregamento do vídeo usa YouTube com domínio de privacidade aprimorada e apenas após interação.
