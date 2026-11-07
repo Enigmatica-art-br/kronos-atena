@@ -1,29 +1,38 @@
-# Kronos / Atena — portal IFRJ
+# Kronos & Atena — portal IFRJ
 
-Protótipo estático e responsivo das equipes, criado com HTML, CSS e JavaScript modular, sem build e sem backend. Publicação no GitHub Pages, sem domínio personalizado.
+Portal estático, responsivo e sem framework das equipes. Repositório independente; GitHub Pages sem domínio personalizado.
 
-## Rodar
-Sirva esta pasta com qualquer servidor HTTP estático, por exemplo `python -m http.server 4181`. Módulos JavaScript precisam de HTTP; não abrir index.html diretamente via file://.
+## Executar
+Sirva a raiz com um servidor HTTP estático, por exemplo `python -m http.server 4181`. As rotas usam hash e funcionam diretamente no GitHub Pages.
 
-## Organização
-- `index.html`: estrutura, navegação e rodapé.
-- `styles.css`: estrutura e adaptações móveis.
-- `theme.css`: composição mecânica em preto e dourado; leitura limpa, recortes localizados e acentos de latão. Sem filtro sobre a página.
-- `data.js`: pessoas, robôs, projetos e publicações. IDs ligam os registros.
-- `app.js`: rotas por hash, páginas, filtros, busca e navegação.
-- `assets/`: banner e retratos de demonstração.
-- `docs/PLANO.md`: arquitetura, escopo, critérios e pendências.
+## Arquivos
+- `index.html`: navegação e estrutura compartilhada.
+- `portal.css`: composição, tipografia, superfícies e layout responsivo.
+- `app.js`: navegação imediata, filtros, reprodução e controles das fileiras.
+- `views.js`: central, equipes, catálogos, perfis, projetos e publicações.
+- `data.js`: registros e ligações entre pessoas, robôs, projetos e campanhas.
+- `content/instagram/`: publicações oficiais com legendas, imagens e vídeos.
+- `tools/collect-instagram.mjs`: coleta com Brave headless isolado.
+- `tools/import-instagram.mjs`: normalização e curadoria por projeto.
+- `tools/check-content.mjs`: verifica integridade das legendas, links e arquivos.
+- `docs/COLETA-INSTAGRAM.md`: operação e limites da coleta.
+- `docs/PLANO.md`: arquitetura, decisões e pendências.
 
-## Substituição de conteúdo
-Pessoas e robôs estão claramente identificados como fictícios. Os retratos são gerados, não integrantes reais. Cadastre URLs reais de Lattes e redes nos campos `lattes` e `social`. Datas usam `AAAA-MM`; saída `null` significa participação atual. Troque a ilustração técnica por fotografia quando o acervo real for fornecido.
+## Acervo oficial
+12 publicações públicas coletadas do Instagram `@equipe.kronos`, com 18 imagens e 3 vídeos. As páginas próprias preservam a legenda integral, os slides, os vídeos e o link original. Projetos: Oficinas & Semana Acadêmica, entrevistas, Mobiliza, uniformes e Talos IA.
 
-O Talos IA e seu vínculo ao Desafio Liga Jovem foram informados pelo responsável. O pitch oficial foi localizado no canal `@EquipeKronos`: https://www.youtube.com/watch?v=0SkIhD2li0U. Não foram inventadas capacidades técnicas ou resultados. O perfil oficial de Instagram é https://www.instagram.com/equipe.kronos/; permalinks dos posts ainda aguardam curadoria.
+O pitch oficial do Talos IA está conectado ao projeto e à comunicação: https://www.youtube.com/watch?v=0SkIhD2li0U. O player do YouTube só carrega após interação. Os vídeos nativos do Instagram não iniciam automaticamente e usam preload de metadados.
 
-## Imagens originais
-Somente os retratos de demonstração são usados como imagens geradas: `assets/pessoas-demo.webp`. Brief: dez estudantes adultos fictícios em estúdio, dispostos em cinco colunas e duas linhas. `assets/mechanism.svg` é uma composição vetorial própria de chapas, eixos e cabos; não reproduz a capa de álbum. A fonte expressiva fica restrita à marca Kronos; textos, menus e fichas usam DM Sans local, com licença incluída.
+## Dados de demonstração
+Os dez perfis e os sete robôs continuam demonstrativos, com fotos geradas e identificação explícita. Os retratos e robôs não representam integrantes ou construções reais. Legendas e pessoas citadas nas publicações oficiais não foram misturadas aos perfis fictícios. Campos Lattes e redes aceitam links reais quando fornecidos. Datas usam AAAA-MM, com saída null para participação atual.
 
-## Revisão de composição e navegação
-A central usa títulos diretos (Robôs, Talos IA, Pessoas e Comunicação), sem numeração ou cabeçalhos auxiliares. A navegação interna renderiza no clique, preserva voltar/avançar e move o foco para o conteúdo. O retorno ao topo usa comportamento instantâneo para evitar a demora causada por rolagem suave global. Carrosséis mantêm deslocamento suave apenas dentro da fileira.
+## Imagens demonstrativas
+`assets/pessoas-demo.webp`: dez adultos fictícios em retratos de estúdio, cinco colunas e duas linhas.
+`assets/robos-demo.webp`: nove construções educacionais fictícias em bancada, três colunas e três linhas; sete usadas no catálogo.
+Ambas geradas com a ferramenta integrada de imagens, sem referência aos rostos das capas de álbum. A identidade da interface usa CSS e o próprio conteúdo do acervo; nenhum banner gerado ou filtro global.
+
+## Verificação
+`node tools/check-content.mjs` compara as legendas importadas com a fonte, verifica as URLs e cada arquivo local. A navegação, os filtros, os carrosséis, o menu móvel e a ausência de overflow são verificados no navegador. As setas usam a posição real dos cartões, permitem cliques consecutivos e desativam nos limites.
 
 ## Publicação
-GitHub Pages a partir da raiz da branch `main`. Não adicionar CNAME até autorização do responsável. O carregamento do vídeo usa YouTube com domínio de privacidade aprimorada e apenas após interação.
+Raiz da branch main, com .nojekyll. Não configurar CNAME até autorização.

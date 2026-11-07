@@ -34,3 +34,10 @@ Referências de álbum: composição industrial e mecânica, sem reproduzir rost
 
 ## Pendências editoriais para a versão definitiva
 Logo oficial; nomes, retratos e datas reais; história da Atena; fichas reais de robôs e permalinks do Instagram. Referências de álbum recebidas e incorporadas. Pitch oficial confirmado: 0SkIhD2li0U. Não anunciar resultados, prêmios ou especificações inventadas como fatos.
+
+## Acervo e navegação — revisão executada
+O script `tools/collect-instagram.mjs` usa o Brave headless em sessão isolada. A coleta pública encontrou 12 posts, com 18 imagens e 3 vídeos. As páginas de publicação preservam os textos e mídias originais e ligam cada registro ao seu projeto e à fonte. Foram criados agrupamentos reais de oficinas, entrevistas, Mobiliza e uniformes. A explicação pública sobre APIs também aparece no Talos IA.
+
+A central passou a mostrar projetos, todas as sete fichas de robôs, os dez integrantes e as publicações. As imagens dos robôs são demonstrativas e distintas. As fileiras têm controles calculados pelas posições reais dos itens, contagem, limites desativados e suporte a cliques consecutivos. Catálogos oferecem busca e filtros; a navegação troca no próprio clique. O CSS foi consolidado em `portal.css`, e as vistas foram separadas do controlador em `views.js`.
+
+Os permalinks dos 12 registros coletados estão resolvidos. A sessão pública pode não expor todo o histórico do Instagram; os dados reais de participantes e robôs, assim como a logo oficial e o histórico institucional da Atena, continuam pendentes.
